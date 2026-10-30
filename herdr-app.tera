@@ -1,0 +1,55 @@
+---
+whiskers:
+  version: ^2.5.1
+  matrix:
+    - flavor
+  filename: "themes/catppuccin-{{flavor.identifier}}.json"
+---
+{
+  "background": "#{{base.hex}}",
+  "foreground": "#{{text.hex}}",
+  "selection": "#{{overlay2 | mix(color=base, amount=0.2) | get(key="hex")}}",
+  "cursor": "#{{rosewater.hex}}",
+  "ansi": [
+    "#{{if(cond=flavor.dark, t=surface1.hex, f=subtext1.hex)}}",
+    "#{{red.hex}}",
+    "#{{green.hex}}",
+    "#{{yellow.hex}}",
+    "#{{blue.hex}}",
+    "#{{pink.hex}}",
+    "#{{teal.hex}}",
+    "#{{if(cond=flavor.dark, t=subtext0.hex, f=surface2.hex)}}",
+    "#{{if(cond=flavor.dark, t=surface2.hex, f=subtext0.hex)}}",
+    "#{{red.hex}}",
+    "#{{green.hex}}",
+    "#{{yellow.hex}}",
+    "#{{blue.hex}}",
+    "#{{pink.hex}}",
+    "#{{teal.hex}}",
+    "#{{if(cond=flavor.dark, t=subtext1.hex, f=surface1.hex)}}"
+  ],
+  "colors": {
+    "accent": "#{{blue.hex}}",
+    "accent_foreground": "#{{base.hex}}",
+    "blocked": "#{{red.hex}}",
+    "border": "#{{surface0.hex}}",
+    "canvas": "#{{mantle.hex}}",
+    "chrome": "#{{crust.hex}}",
+    "dim": "#{{overlay1.hex}}",
+    "done": "#{{blue.hex}}",
+    "foreground": "#{{text.hex}}",
+    "hover": "#{{overlay2 | mod(opacity=0.1) | get(key="hex")}}",
+    "idle": "#{{overlay1.hex}}",
+    "input": "#{{surface1.hex}}",
+    "muted": "#{{subtext0.hex}}",
+    "popover": "#{{mantle.hex}}",
+    "raised": "#{{surface0.hex}}",
+    "ring": "#{{lavender.hex}}",
+    "selected": "#{{overlay2 | mod(opacity=0.2) | get(key="hex")}}",
+    "solid": "#{{text.hex}}",
+    "solid_foreground": "#{{base.hex}}",
+    "surface": "#{{base.hex}}",
+    "unknown": "#{{overlay1.hex}}",
+    "working": "#{{yellow.hex}}"
+  }
+}
